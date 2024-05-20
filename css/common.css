@@ -1,0 +1,156 @@
+@import url('modern-normolize.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none outside none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 600;
+}
+
+h1, h2 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: #000000;
+}
+
+body {
+  margin: 16px;
+  font-family: "Montserrat", 'Segoe UI', 'Open Sans','Helvetica Neue', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #2E2F42;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input {
+  border: 1px solid #808080;
+  height: 40px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  outline: none;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  height: 40px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+input:focus {
+  border-color: #000000;
+}
+
+input:active {
+  border-color: #808080;
+}
+
+label.required {
+  color: #fa0000;
+}
+
+label.required input {
+  border-color: #fa0000;
+}
+
+.button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  outline: none;
+  color: #ffffff;
+  min-width: 120px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-size: inherit;
+  font-family: inherit;
+  height: 40px;
+  font-weight: 500;
+}
+
+.button.primary {
+  background-color: #4E75FF;
+}
+
+.button.primary:hover,
+.button.primary:focus {
+  background-color: #6C8CFF;
+}
+
+.button.danger {
+  background-color: #FF4E4E;
+  border: 1px solid #FF4E4E;
+}
+
+.button.danger:hover,
+.button.danger:focus {
+  background-color: #FF7070;
+}
+
+.button:active {
+  border: 1px solid #000;
+}
+
+ul#categories {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+ul > li.item {
+  background-color: #F6F6FE;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ul>li.item > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+ul>li.item>ul>li {
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  height: 40px;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.gallery {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.gallery img {
+  height: 300px;
+  border: 1px solid #000;
+  padding: 4px;
+}
