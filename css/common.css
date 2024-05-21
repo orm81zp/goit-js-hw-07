@@ -146,7 +146,6 @@ ul>li.item>ul>li {
 }
 
 .gallery img {
-  height: 300px;
   border: 1px solid #000;
   padding: 4px;
 }
@@ -169,13 +168,9 @@ ul>li.item>ul>li {
 #boxes {
   flex-wrap: wrap;
   gap: 44px;
-  display: none;
+  display: flex;
 }
 
 #boxes.card {
   padding: 32px;
-}
-
-#boxes.active {
-  display: flex;
 }

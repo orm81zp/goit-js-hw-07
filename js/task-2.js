@@ -15,13 +15,13 @@ const images = [
 
 const gallery = document.querySelector('.gallery');
 
-for (const img of images) {
-  const liElement = document.createElement('li');
-  const imgElement = document.createElement('img');
-  imgElement.setAttribute('src', img.url);
-  imgElement.setAttribute('alt', img.alt);
-  imgElement.setAttribute('height', 300);
+const adjacentImages = images
+  .map(
+    image =>
+      `<li class="gallery-item">
+     <img src="${image.url}" alt="${image.alt}" height="300">
+   </li>`
+  )
+  .join('');
 
-  liElement.appendChild(imgElement);
-  gallery.appendChild(liElement);
-}
+gallery.insertAdjacentHTML('beforeend', adjacentImages);
