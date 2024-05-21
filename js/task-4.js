@@ -1,31 +1,27 @@
 const onSubmitHandler = fields => event => {
   event.preventDefault();
   const { elements } = event.target;
-  let isValid = true;
+  let isRequiredError = false;
   const data = {};
 
   for (const field of fields) {
-    if (field.required) {
-      for (const element of elements) {
-        if (element.name === field.name) {
-          const formattedValue = element.value.trim();
-          if (!formattedValue) {
-            isValid = false;
-            element.parentNode.classList.add('required');
-          } else {
-            element.parentNode.classList.remove('required');
-            data[element.name] = formattedValue;
-          }
+    for (const element of elements) {
+      if (element.name === field.name) {
+        const formattedValue = element.value.trim();
+        data[element.name] = formattedValue;
+
+        if (field.required && !formattedValue) {
+          isRequiredError = true;
         }
       }
     }
   }
 
-  if (isValid) {
+  if (isRequiredError) {
+    alert('All form fields must be filled in');
+  } else {
     event.target.reset();
     console.log(data);
-  } else {
-    alert('All form fields must be filled in');
   }
 };
 

@@ -33,6 +33,12 @@ body {
   font-size: 16px;
 }
 
+.card {
+  background-color: #F6F6FE;
+  border-radius: 8px;
+  padding: 16px;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -65,14 +71,6 @@ input:focus {
 
 input:active {
   border-color: #808080;
-}
-
-label.required {
-  color: #fa0000;
-}
-
-label.required input {
-  border-color: #fa0000;
 }
 
 .button {
@@ -120,9 +118,6 @@ ul#categories {
 }
 
 ul > li.item {
-  background-color: #F6F6FE;
-  border-radius: 8px;
-  padding: 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -149,8 +144,38 @@ ul>li.item>ul>li {
   align-items: center;
   justify-content: center;
 }
+
 .gallery img {
   height: 300px;
   border: 1px solid #000;
   padding: 4px;
+}
+
+#controls {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+#controls.card {
+  padding: 32px;
+}
+
+#controls input{
+  max-width: 150px;
+  text-align: center;
+}
+
+#boxes {
+  flex-wrap: wrap;
+  gap: 44px;
+  display: none;
+}
+
+#boxes.card {
+  padding: 32px;
+}
+
+#boxes.active {
+  display: flex;
 }
